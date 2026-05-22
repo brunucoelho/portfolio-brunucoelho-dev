@@ -1,0 +1,69 @@
+/* ── RESPONSIVIDADE ── */
+@media (max-width: 900px) {
+  .nav-inner {
+    padding: 0 1.25rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .about-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .transition-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .t-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 4rem 1.25rem;
+  }
+
+  .hero {
+    padding: 6rem 1.25rem 3rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-ctas,
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn,
+  .contact-link {
+    justify-content: center;
+  }
+
+  .skill-highlight {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-item {
+    padding-left: 42px;
+  }
+}

@@ -1,0 +1,14 @@
+/* ── EXPERIENCE ── */
+.timeline{margin-top:3rem;position:relative}
+.timeline::before{content:'';position:absolute;left:16px;top:8px;bottom:8px;width:1px;background:var(--border)}
+.timeline-item{padding-left:52px;position:relative;margin-bottom:3rem}
+.timeline-dot{position:absolute;left:9px;top:6px;width:15px;height:15px;border-radius:50%;border:2px solid var(--accent);background:var(--bg)}
+.timeline-date{font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem;font-weight:300}
+.timeline-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem}
+.timeline-card h3{font-family:var(--font-head);font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:2px}
+.timeline-company{font-size:0.875rem;color:var(--muted);margin-bottom:1rem}
+.timeline-bullets{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.timeline-bullets li{color:var(--muted);font-size:0.875rem;font-weight:300;padding-left:16px;position:relative;line-height:1.5}
+.timeline-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent2);font-size:0.75rem}
+.timeline-bullets li strong{color:var(--text);font-weight:500}
+.timeline-skills{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}

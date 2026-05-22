@@ -1,0 +1,10 @@
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:4rem}
+.about-text p{color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:1.2rem;font-size:1.05rem}
+.about-text p strong{color:var(--text);font-weight:500}
+.about-text p em{color:var(--accent2);font-style:normal}
+.about-stats{display:grid;gap:1rem}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:1.5rem;position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--eng))}
+.stat-num{font-family:var(--font-head);font-size:2.5rem;font-weight:800;color:var(--white);line-height:1}
+.stat-label{color:var(--muted);font-size:0.85rem;margin-top:4px}
