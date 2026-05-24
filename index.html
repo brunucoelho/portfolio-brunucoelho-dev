@@ -1,894 +1,869 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark" data-lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bruno Coelho — brunucoelho.dev</title>
+    <meta
+      name="description"
+      content="Bruno Coelho — Analytics Engineer transitioning to Software Engineering with focus on Java and Spring Boot."
+    />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/i18n.js"></script>
     <script defer src="js/main.js"></script>
   </head>
   <body>
-    <nav>
+    <!-- NAV -->
+    <nav id="nav">
       <div class="nav-inner">
-        <div class="nav-logo">brunu<span>coelho</span>.dev</div>
-        <ul class="nav-links">
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#experiencia">Experiência</a></li>
-          <li><a href="#contato">Contato</a></li>
+        <a href="#" class="nav-logo">brunucoelho<span>.dev</span></a>
+        <div class="nav-center">
+          <ul class="nav-links">
+            <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+            <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+            <li>
+              <a href="#experiencia" data-i18n="nav.experience">Experiência</a>
+            </li>
+            <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="nav-controls">
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            aria-label="Toggle language"
+          >
+            <img
+              id="langLabel"
+              class="lang-flag lang-active"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcUlEQVR4nGNgoBSsCg1lpgQz+FVt/Y8LH3d1/YcXOzv/BxsAAt3bP6DQYPF///BiuAHdaJpBNEj8+4QJePEgc0HXtvcoNEku8MeBiXLBcWdngjbhdcFxZ2eCNtHWBcecnP4ec3b+RxZ2cvpLcV4aeAAA7MBEQTcNKTsAAAAASUVORK5CYII="
+              alt="Português"
+            />
+            <img
+              id="langOther"
+              class="lang-flag lang-other"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABXUlEQVR4nMVSS0sCURj1dxbUIiNalBGRqIFaDpZYiBPkyDjM6KIEcUYhUzBaDFaD2qYwiAI39hDRCDSN6sS9kDr42Ljwwrl83HM53/keBsPUzxy/iUlgIBenCV0EtBDsKS8WRAtiV34k8yyMkhW2pAfcde8fwYDAYS4IU3Qba8d2PD7xQD1CUS7zWI86sHLiBJsLDhfYzbJYlKzwZTxovYYRisuY2Ulh1nUGQZbRfgsjeLEPo2SBO+vXC5gVN5bCNlzeHtGMQlyG8UCFK1EFo1RpTEQIV7gPYDliw0aM6QnYFQaNZ7Fruf7RRrPzg0rjG+rDJ3zpGnXyz7+/iHAmxgjMuzNgMzXEi02UKl9odX4hpO50Ao5+AfOIEoh9l1LFlliAelOkXL40pAROE7B3rm8iqZnYHmyidbCJnG6MTphGjHF13Bi5/kU69dJMsuanIDF5I9zQRZpolad+/gAioyZCxZuybgAAAABJRU5ErkJggg=="
+              alt="English"
+            />
+          </button>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-icon" id="themeIcon">☀</span>
+          </button>
+          <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="nav-mobile" id="navMobile">
+        <ul>
+          <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+          <li>
+            <a href="#experiencia" data-i18n="nav.experience">Experiência</a>
+          </li>
+          <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- HERO -->
-    <section class="hero">
-      <div class="hero-bg">
-        <div class="hero-grid"></div>
-        <div class="hero-orb1"></div>
-        <div class="hero-orb2"></div>
+    <section class="hero" id="hero">
+      <!-- Corner labels -->
+      <div class="hero-corner hero-corner-tl">
+        <span class="dot-pulse"></span>
+        <span data-i18n="hero.available"
+          >Disponível para novas oportunidades</span
+        >
       </div>
-      <div class="hero-content">
-        <div class="hero-badge fade-up">
-          <span class="hero-badge-dot"></span>
-          Disponível para novas oportunidades
+      <div class="hero-corner hero-corner-tr">
+        <span data-i18n="hero.tagline"
+          >5+ anos em dados. Agora, engenharia.</span
+        >
+      </div>
+
+      <!-- Photo centered -->
+      <div class="hero-photo-wrap">
+        <img
+          src="css/src/photo1.png"
+          alt="Bruno Coelho"
+          class="hero-photo"
+          onerror="
+            this.style.display = 'none';
+            this.nextElementSibling.style.display = 'flex';
+          "
+        />
+        <div class="hero-photo-fallback">
+          <span>BC</span>
         </div>
-        <h1 class="fade-up delay-1">
-          <span class="line1">Bruno Coelho</span>
-          <span class="line2">Data → Software Engineer</span>
-        </h1>
-        <p class="hero-sub fade-up delay-2">
-          <strong>5+ anos construindo soluções com dados.</strong> Hoje,
-          construindo os sistemas que os sustentam. Analista de dados em
-          transição intencional para Engenharia de Software com foco em
-          <em>Java</em>.
-        </p>
-        <div class="hero-ctas fade-up delay-3">
-          <a class="btn btn-primary" href="#projetos">Ver Projetos</a>
-          <a class="btn btn-outline" href="#contato">Entre em Contato</a>
-          <a
-            class="btn btn-outline"
-            href="https://github.com/brunucoelho"
-            target="_blank"
-            >GitHub ↗</a
+      </div>
+
+      <!-- Scrolling marquee text -->
+      <div class="hero-marquee-wrap">
+        <div class="hero-marquee" id="heroMarquee">
+          <div class="hero-marquee-track" id="marqueeTrack">
+            <span>Java Developer</span>
+            <span class="marquee-dot">&</span>
+            <span>Analytics Engineer</span>
+            <span class="marquee-dot">&</span>
+            <span>Java Developer</span>
+            <span class="marquee-dot">&</span>
+            <span>Analytics Engineer</span>
+            <span class="marquee-dot">&</span>
+            <span>Java Developer</span>
+            <span class="marquee-dot">&</span>
+            <span>Analytics Engineer</span>
+            <span class="marquee-dot">&</span>
+            <span>Java Developer</span>
+            <span class="marquee-dot">&</span>
+            <span>Analytics Engineer</span>
+            <span class="marquee-dot">&</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dock bar -->
+      <div class="hero-dock">
+        <a
+          class="dock-item"
+          href="https://instagram.com/brunucoelho"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-        </div>
-        <div class="hero-tags fade-up delay-4">
-          <span class="tag tag-data">Análise de Dados</span>
-          <span class="tag tag-data">SQL Avançado</span>
-          <span class="tag tag-data">Python</span>
-          <span class="tag tag-eng">Java</span>
-          <span class="tag tag-eng">Spring Boot</span>
-          <span class="tag tag-eng">APIs REST</span>
-          <span class="tag tag-neutral">brunucoelho.dev</span>
-        </div>
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+          <span class="dock-tooltip">Instagram</span>
+        </a>
+        <a
+          class="dock-item"
+          href="https://linkedin.com/in/brunucoelho"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+            />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+          <span class="dock-tooltip">LinkedIn</span>
+        </a>
+        <a
+          class="dock-item dock-item-avatar"
+          href="#sobre"
+          aria-label="Sobre Bruno"
+        >
+          <img
+            src="css/src/photo1.png"
+            alt="Bruno Coelho"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'flex';
+            "
+          />
+          <div class="dock-avatar-fallback">BC</div>
+          <span class="dock-tooltip">Sobre</span>
+        </a>
+        <a
+          class="dock-item"
+          href="mailto:bruno-coelho@hotmail.com"
+          aria-label="E-mail"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          <span class="dock-tooltip">E-mail</span>
+        </a>
+        <a
+          class="dock-item"
+          href="https://github.com/brunucoelho"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+            />
+          </svg>
+          <span class="dock-tooltip">GitHub</span>
+        </a>
       </div>
     </section>
 
-    <hr class="divider" />
-
-    <!-- TRANSITION BANNER -->
-    <div class="transition-banner">
-      <div class="transition-inner">
-        <div class="t-side t-left">
-          <h3>Analista de Dados Sênior</h3>
-          <p>
-            5+ anos de experiência construindo pipelines, dashboards e insights
-            que movem negócios
-          </p>
-        </div>
-        <div class="t-arrow">
-          <svg
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M8 20h24M24 12l8 8-8 8"
-              stroke="url(#garrow)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <defs>
-              <linearGradient
-                id="garrow"
-                x1="8"
-                y1="20"
-                x2="32"
-                y2="20"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#22d3ee" />
-                <stop offset="1" stop-color="#a78bfa" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <span>transição</span>
-        </div>
-        <div class="t-side t-right">
-          <h3>Engenheiro de Software</h3>
-          <p>
-            Foco em Java e Spring Boot — trazendo maturidade técnica e visão de
-            negócio para o desenvolvimento
-          </p>
-        </div>
-      </div>
-    </div>
-
     <!-- SOBRE -->
-    <section id="sobre">
+    <section id="sobre" class="section-sobre">
       <div class="container">
-        <p class="section-label">Sobre mim</p>
-        <h2 class="section-title">
-          Técnico por natureza,<br />engenheiro por escolha
-        </h2>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <h2 data-i18n="about.title">Sobre mim</h2>
+        </div>
+        <div class="sobre-grid">
+          <div class="sobre-text">
+            <p class="lead" data-i18n="about.lead">
+              Técnico por natureza, engenheiro por escolha.
+            </p>
+            <p data-i18n="about.p1">
               Comecei minha carreira mergulhado em dados — construindo
               pipelines, modelando bancos, transformando números em decisões de
-              negócio. Ao longo de <strong>mais de 5 anos</strong>, aprendi que
-              entender profundamente os dados exige também entender os sistemas
-              que os produzem e consomem.
+              negócio. Ao longo de mais de 5 anos, aprendi que entender
+              profundamente os dados exige também entender os sistemas que os
+              produzem e consomem.
             </p>
-            <p>
-              Essa percepção me levou a uma transição <em>intencional</em> para
-              a Engenharia de Software. Não estou começando do zero — estou
+            <p data-i18n="about.p2">
+              Essa percepção me levou a uma transição intencional para a
+              Engenharia de Software. Não estou começando do zero — estou
               evoluindo. Trago comigo maturidade técnica, capacidade analítica e
               a rara habilidade de enxergar o problema antes de escrever a
               solução.
             </p>
-            <p>
-              Hoje, com foco em <strong>Java e Spring Boot</strong>, construo
-              APIs, sistemas e serviços com a mesma disciplina que sempre
-              apliquei à análise de dados: clareza, performance e impacto real.
+            <p data-i18n="about.p3">
+              Hoje, com foco em Java e Spring Boot, construo APIs, sistemas e
+              serviços com a mesma disciplina que sempre apliquei à análise de
+              dados: clareza, performance e impacto real.
             </p>
           </div>
-          <div class="about-stats">
-            <div class="stat-card">
+          <div class="sobre-stats">
+            <div class="stat">
               <div class="stat-num">5+</div>
-              <div class="stat-label">
-                anos em análise e engenharia de dados
-              </div>
+              <div class="stat-desc" data-i18n="about.stat1">anos em dados</div>
             </div>
-            <div class="stat-card">
-              <div class="stat-num">3</div>
-              <div class="stat-label">
-                projetos Java em produção / portfólio
-              </div>
+            <div class="stat">
+              <div class="stat-num">4</div>
+              <div class="stat-desc" data-i18n="about.stat2">empresas</div>
             </div>
-            <div class="stat-card">
+            <div class="stat">
+              <div class="stat-num">2</div>
+              <div class="stat-desc" data-i18n="about.stat3">graduações</div>
+            </div>
+            <div class="stat">
               <div class="stat-num">∞</div>
-              <div class="stat-label">
-                queries SQL escritas (e ainda contando)
+              <div class="stat-desc" data-i18n="about.stat4">queries SQL</div>
+            </div>
+            <div class="transition-card">
+              <div class="tc-from">
+                <span class="tc-label" data-i18n="about.from">Dados</span>
+                <div class="tc-pills">
+                  <span class="pill pill-data">Python</span>
+                  <span class="pill pill-data">SQL</span>
+                  <span class="pill pill-data">BI</span>
+                </div>
+              </div>
+              <div class="tc-arrow">→</div>
+              <div class="tc-to">
+                <span class="tc-label" data-i18n="about.to">Engenharia</span>
+                <div class="tc-pills">
+                  <span class="pill pill-eng">Java</span>
+                  <span class="pill pill-eng">Spring</span>
+                  <span class="pill pill-eng">API</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <hr class="divider" />
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" class="section-skills">
       <div class="container">
-        <p class="section-label">Stack técnica</p>
-        <h2 class="section-title">Habilidades &amp; Tecnologias</h2>
-        <p class="section-sub">
-          Dois mundos que se complementam — background sólido em dados, foco
-          atual em engenharia de software.
-        </p>
-
-        <div class="skills-grid">
-          <div class="skill-block skill-block-eng">
-            <div class="skill-block-label">
-              Engenharia de Software · foco principal
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2 data-i18n="skills.title">Skills</h2>
+        </div>
+        <div class="skills-layout">
+          <div class="skill-col skill-col-eng">
+            <div class="skill-col-header">
+              <span class="skill-col-tag" data-i18n="skills.eng.tag"
+                >Foco principal</span
+              >
+              <h3 data-i18n="skills.eng.title">Engenharia de Software</h3>
             </div>
-            <h3>Java &amp; Backend</h3>
-            <div class="skill-items">
-              <span class="skill-pill pill-eng">Java (Core / OOP)</span>
-              <span class="skill-pill pill-eng">Spring Boot</span>
-              <span class="skill-pill pill-eng">Spring Data JPA</span>
-              <span class="skill-pill pill-eng">Spring Security</span>
-              <span class="skill-pill pill-eng">APIs REST</span>
-              <span class="skill-pill pill-eng">JWT</span>
-              <span class="skill-pill pill-eng">Maven / Gradle</span>
-              <span class="skill-pill pill-eng">JUnit</span>
-              <span class="skill-pill pill-eng">Docker</span>
-              <span class="skill-pill pill-eng">Git / GitHub</span>
-              <span class="skill-pill pill-eng">PostgreSQL</span>
-              <span class="skill-pill pill-eng">Microsserviços</span>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>Java 17 (Core, OOP,
+                Streams)
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>Spring Boot
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>Spring Data JPA
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>Spring Security + JWT
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>APIs REST
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>Maven / Gradle
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>JUnit 5 + Mockito
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>Docker
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>Git / GitHub
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-eng"></span>PostgreSQL
+              </div>
             </div>
           </div>
-          <div class="skill-block skill-block-data">
-            <div class="skill-block-label">
-              Dados &amp; Analytics · background sólido
+          <div class="skill-col-divider"></div>
+          <div class="skill-col skill-col-data">
+            <div class="skill-col-header">
+              <span class="skill-col-tag" data-i18n="skills.data.tag"
+                >Background sólido</span
+              >
+              <h3 data-i18n="skills.data.title">Dados & Analytics</h3>
             </div>
-            <h3>Data &amp; Analytics</h3>
-            <div class="skill-items">
-              <span class="skill-pill pill-data">Python</span>
-              <span class="skill-pill pill-data">SQL Avançado</span>
-              <span class="skill-pill pill-data">Apache Spark</span>
-              <span class="skill-pill pill-data">Airflow</span>
-              <span class="skill-pill pill-data">dbt</span>
-              <span class="skill-pill pill-data">Power BI</span>
-              <span class="skill-pill pill-data">ETL / ELT</span>
-              <span class="skill-pill pill-data">Data Modeling</span>
-              <span class="skill-pill pill-data">Pandas / NumPy</span>
-              <span class="skill-pill pill-data">BigQuery</span>
+            <div class="skill-list">
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>Python
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>SQL Avançado
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>Apache Spark
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>Airflow
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>dbt (Data Build Tool)
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>Power BI
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>BigQuery / Snowflake
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>ETL / ELT
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>Data Modeling
+              </div>
+              <div class="skill-item">
+                <span class="skill-dot dot-data"></span>Pandas / NumPy
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="skill-highlight">
-          <div class="skill-highlight-icon">
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="url(#gicon)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-              />
-              <defs>
-                <linearGradient
-                  id="gicon"
-                  x1="2"
-                  y1="2"
-                  x2="22"
-                  y2="22"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#60a5fa" />
-                  <stop offset="1" stop-color="#a78bfa" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div class="skill-highlight-text">
-            <strong>Diferencial único: a bridge entre dados e sistemas</strong>
-            <span
-              >Entendo profundamente os dois lados — sei construir a API e saber
-              quais dados ela precisa expor e por quê.</span
-            >
-          </div>
+        <div class="skills-bridge">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+            />
+          </svg>
+          <p data-i18n="skills.bridge">
+            Diferencial único: entendo profundamente os dois lados — sei
+            construir a API e saber exatamente quais dados ela precisa expor e
+            por quê.
+          </p>
         </div>
       </div>
     </section>
-
-    <hr class="divider" />
 
     <!-- PROJETOS -->
-    <section id="projetos">
+    <section id="projetos" class="section-projects">
       <div class="container">
-        <p class="section-label">Portfólio</p>
-        <h2 class="section-title">Projetos em Destaque</h2>
-        <p class="section-sub">
-          Do pipeline de dados à API em produção — projetos que mostram
-          maturidade técnica e transição real.
-        </p>
-
-        <div class="projects-filter">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="eng">Java / Backend</button>
-          <button class="filter-btn" data-filter="data">Dados</button>
-          <button class="filter-btn" data-filter="bridge">Dados + Eng.</button>
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <h2 data-i18n="projects.title">Projetos</h2>
         </div>
-
-        <div class="projects-grid">
-          <!-- Projeto 1 — Java destaque -->
-          <div class="project-card card-eng" data-category="eng">
-            <span class="featured-badge">⭐ Destaque</span>
-            <div class="card-type">Java · Backend</div>
-            <h3>API de Gestão Financeira</h3>
-            <p>
-              API REST completa com autenticação JWT, controle de acesso por
-              roles, operações CRUD, paginação e documentação Swagger.
-              Arquitetura em camadas com boas práticas SOLID.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Java 17</span>
-              <span class="card-tag">Spring Boot</span>
-              <span class="card-tag">Spring Security</span>
-              <span class="card-tag">JWT</span>
-              <span class="card-tag">PostgreSQL</span>
-              <span class="card-tag">Swagger</span>
-              <span class="card-tag">Docker</span>
+        <div class="projects-filter">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            data-i18n="projects.filter.all"
+          >
+            Todos
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="eng"
+            data-i18n="projects.filter.eng"
+          >
+            Java / Backend
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="data"
+            data-i18n="projects.filter.data"
+          >
+            Dados
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="bridge"
+            data-i18n="projects.filter.bridge"
+          >
+            Dados + Eng.
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="fullstack"
+            data-i18n="projects.filter.fullstack"
+          >
+            Full-Stack
+          </button>
+        </div>
+        <div class="projects-list" id="projectsList">
+          <div class="project-row" data-category="eng">
+            <div class="project-meta">
+              <span class="project-num">01</span>
+              <span class="project-type type-eng" data-i18n="projects.type.java"
+                >Java · Backend</span
+              >
             </div>
-            <div class="card-links">
+            <div class="project-info">
+              <h3 data-i18n="projects.p1.title">API de Gestão Financeira</h3>
+              <p data-i18n="projects.p1.desc">
+                API REST completa com autenticação JWT, controle de acesso por
+                roles, operações CRUD, paginação e documentação Swagger.
+                Arquitetura em camadas com boas práticas SOLID.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Java 17</span
+                ><span class="project-tag">Spring Boot</span
+                ><span class="project-tag">Spring Security</span
+                ><span class="project-tag">JWT</span
+                ><span class="project-tag">PostgreSQL</span
+                ><span class="project-tag">Docker</span>
+              </div>
+            </div>
+            <div class="project-links">
               <a
-                class="card-link"
                 href="https://github.com/brunucoelho"
                 target="_blank"
+                rel="noopener"
+                class="project-link"
+                >GitHub ↗</a
               >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-                GitHub
-              </a>
               <a
-                class="card-link"
                 href="https://www.brunucoelho.dev"
                 target="_blank"
+                rel="noopener"
+                class="project-link project-link-demo"
+                data-i18n="projects.demo"
+                >Demo ↗</a
               >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+            </div>
+          </div>
+
+          <div class="project-row project-row-featured" data-category="bridge">
+            <div class="project-meta">
+              <span class="project-num">02</span>
+              <span
+                class="project-type type-bridge"
+                data-i18n="projects.type.bridge"
+                >Dados + Eng.</span
+              >
+            </div>
+            <div class="project-info">
+              <h3 data-i18n="projects.p2.title">
+                Data Analytics API
+                <span class="featured-tag" data-i18n="projects.featured"
+                  >Destaque</span
                 >
-                  <path
-                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
-                  />
-                </svg>
-                Demo
-              </a>
+              </h3>
+              <p data-i18n="projects.p2.desc">
+                Pipeline de dados em Python processando dados de vendas + API
+                Java expondo os resultados analíticos em tempo real. Une os dois
+                mundos em uma solução end-to-end.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Java</span
+                ><span class="project-tag">Spring Boot</span
+                ><span class="project-tag">Python</span
+                ><span class="project-tag">Pandas</span
+                ><span class="project-tag">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/brunucoelho"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+                >GitHub ↗</a
+              >
             </div>
           </div>
 
-          <!-- Projeto 2 — Bridge -->
-          <div class="project-card card-bridge" data-category="bridge">
-            <div class="card-type">Dados + Engenharia · bridge project</div>
-            <h3>Data Analytics API</h3>
-            <p>
-              Pipeline de dados em Python processando dados de vendas + API Java
-              expondo os resultados analíticos em tempo real. Une os dois mundos
-              em uma solução end-to-end.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Java</span>
-              <span class="card-tag">Spring Boot</span>
-              <span class="card-tag">Python</span>
-              <span class="card-tag">Pandas</span>
-              <span class="card-tag">PostgreSQL</span>
-              <span class="card-tag">REST</span>
+          <div class="project-row" data-category="eng">
+            <div class="project-meta">
+              <span class="project-num">03</span>
+              <span class="project-type type-eng" data-i18n="projects.type.java"
+                >Java · Backend</span
+              >
             </div>
-            <div class="card-links">
+            <div class="project-info">
+              <h3 data-i18n="projects.p3.title">Sistema de Agendamentos</h3>
+              <p data-i18n="projects.p3.desc">
+                Aplicação com regras de negócio complexas, validações
+                customizadas, testes unitários com JUnit 5 e cobertura de
+                código. Foco em clean code e arquitetura testável.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Java 17</span
+                ><span class="project-tag">Spring Boot</span
+                ><span class="project-tag">JUnit 5</span
+                ><span class="project-tag">Mockito</span
+                ><span class="project-tag">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="project-links">
               <a
-                class="card-link"
                 href="https://github.com/brunucoelho"
                 target="_blank"
+                rel="noopener"
+                class="project-link"
+                >GitHub ↗</a
               >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-                GitHub
-              </a>
             </div>
           </div>
 
-          <!-- Projeto 3 — Java -->
-          <div class="project-card card-eng" data-category="eng">
-            <div class="card-type">Java · Backend</div>
-            <h3>Sistema de Agendamentos</h3>
-            <p>
-              Aplicação com regras de negócio complexas, validações
-              customizadas, testes unitários com JUnit e cobertura de código.
-              Foco em clean code e arquitetura testável.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Java 17</span>
-              <span class="card-tag">Spring Boot</span>
-              <span class="card-tag">JUnit 5</span>
-              <span class="card-tag">Mockito</span>
-              <span class="card-tag">H2 / Postgres</span>
+          <div class="project-row" data-category="data">
+            <div class="project-meta">
+              <span class="project-num">04</span>
+              <span
+                class="project-type type-data"
+                data-i18n="projects.type.data"
+                >Dados · Analytics</span
+              >
             </div>
-            <div class="card-links">
+            <div class="project-info">
+              <h3 data-i18n="projects.p4.title">
+                Pipeline de Dados com Airflow
+              </h3>
+              <p data-i18n="projects.p4.desc">
+                Pipeline automatizado processando +2M registros/dia, com
+                orquestração via Airflow, transformações dbt e dashboards no
+                Power BI. Redução de 60% no tempo de atualização.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span
+                ><span class="project-tag">Airflow</span
+                ><span class="project-tag">dbt</span
+                ><span class="project-tag">BigQuery</span
+                ><span class="project-tag">Power BI</span>
+              </div>
+            </div>
+            <div class="project-links">
               <a
-                class="card-link"
                 href="https://github.com/brunucoelho"
                 target="_blank"
+                rel="noopener"
+                class="project-link"
+                >GitHub ↗</a
               >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-
-          <!-- Projeto 4 — Dados -->
-          <div class="project-card card-data" data-category="data">
-            <div class="card-type">Dados · Analytics</div>
-            <h3>Pipeline de Dados com Airflow</h3>
-            <p>
-              Pipeline automatizado que processa +2M registros/dia, com
-              orquestração via Airflow, transformações dbt e dashboards
-              executivos no Power BI. Redução de 60% no tempo de atualização.
-            </p>
-            <div class="card-tags">
-              <span class="card-tag">Python</span>
-              <span class="card-tag">Airflow</span>
-              <span class="card-tag">dbt</span>
-              <span class="card-tag">BigQuery</span>
-              <span class="card-tag">Power BI</span>
-            </div>
-            <div class="card-links">
-              <a
-                class="card-link"
-                href="https://github.com/brunucoelho"
-                target="_blank"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-                GitHub
-              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <hr class="divider" />
 
     <!-- EXPERIÊNCIA -->
-    <section id="experiencia">
+    <section id="experiencia" class="section-exp">
       <div class="container">
-        <p class="section-label">Trajetória</p>
-        <h2 class="section-title">Experiência Profissional</h2>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">JUN/2024 – Presente</div>
-            <div class="timeline-card">
-              <h3>Analista de Dados Sênior</h3>
-              <div class="timeline-company">
-                Equatorial Energia · Goiânia, GO
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <h2 data-i18n="exp.title">Experiência</h2>
+        </div>
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-period">
+              Jun 2024 — <span data-i18n="exp.present">Presente</span>
+            </div>
+            <div class="exp-body">
+              <div class="exp-header">
+                <h3 data-i18n="exp.e1.role">Analista de Dados Sênior</h3>
+                <span class="exp-company"
+                  >Equatorial Energia · Goiânia, GO</span
+                >
               </div>
-              <ul class="timeline-bullets">
-                <li>
-                  <strong>Gestão de Projetos e Agilidade:</strong> Liderança e
-                  gerenciamento de projetos analíticos internos utilizando
-                  métodos ágeis, garantindo cumprimento de prazos, sinergia
-                  entre times e entregas de alto valor.
+              <ul class="exp-bullets">
+                <li data-i18n="exp.e1.b1">
+                  Liderança e gerenciamento de projetos analíticos internos com
+                  métodos ágeis, garantindo entregas de alto valor e sinergia
+                  entre times.
                 </li>
-                <li>
-                  <strong>Inteligência de Negócio (BI):</strong> Desenvolvimento
-                  de dashboards dinâmicos e relatórios estratégicos para a alta
-                  gestão, traduzindo dados complexos em insights acionáveis.
+                <li data-i18n="exp.e1.b2">
+                  Desenvolvimento de dashboards dinâmicos e relatórios
+                  estratégicos para a alta gestão, traduzindo dados complexos em
+                  insights acionáveis.
                 </li>
-                <li>
-                  <strong>Engenharia e Mapeamento de Processos:</strong>
-                  Diagnóstico e otimização de fluxos de trabalho através de
-                  ferramentas como Matriz RACI, SIPOC e mapeamento de fluxos,
-                  elevando a maturidade de dados das áreas de negócio.
+                <li data-i18n="exp.e1.b3">
+                  Diagnóstico e otimização de fluxos de trabalho via Matriz
+                  RACI, SIPOC e mapeamento de processos, elevando a maturidade
+                  de dados das áreas.
                 </li>
-                <li>
-                  <strong>Governança e Padronização:</strong> Estruturação de
-                  POPs, Normas, Instruções Técnicas e documentação de
-                  indicadores, assegurando a confiabilidade, a consistência e o
-                  alinhamento das métricas organizacionais.
+                <li data-i18n="exp.e1.b4">
+                  Estruturação de POPs, Normas e documentação de indicadores,
+                  assegurando confiabilidade e consistência das métricas
+                  organizacionais.
                 </li>
               </ul>
-              <div class="timeline-skills">
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Python</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >SQL</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Power BI</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Snowflake</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Airflow</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >BigQuery</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >dbt (Data Build Tool)</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Scrum</span
-                ><span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Metodologia Ágil</span
-                >
+              <div class="exp-tags">
+                <span class="exp-tag">Python</span
+                ><span class="exp-tag">SQL</span
+                ><span class="exp-tag">Power BI</span
+                ><span class="exp-tag">Snowflake</span
+                ><span class="exp-tag">Airflow</span
+                ><span class="exp-tag">BigQuery</span
+                ><span class="exp-tag">dbt</span
+                ><span class="exp-tag">Scrum</span>
               </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">MAR/2024 – JUN/2024</div>
-            <div class="timeline-card">
-              <h3>Analista de Dados Pleno</h3>
-              <div class="timeline-company">IADVH · São Luís, MA</div>
-              <ul class="timeline-bullets">
-                <li>
-                  <strong>Modelagem e Infraestrutura de Dados:</strong>
+
+          <div class="exp-item">
+            <div class="exp-period">Mar 2024 — Jun 2024</div>
+            <div class="exp-body">
+              <div class="exp-header">
+                <h3 data-i18n="exp.e2.role">Analista de Dados Pleno</h3>
+                <span class="exp-company">IADVH · São Luís, MA</span>
+              </div>
+              <ul class="exp-bullets">
+                <li data-i18n="exp.e2.b1">
                   Desenvolvimento e implementação de bancos de dados, fluxos de
                   coleta e estratégias de integração de fontes primárias e
-                  secundárias, maximizando a qualidade e a eficiência
-                  estatística.
+                  secundárias.
                 </li>
-                <li>
-                  <strong>Análise Estatística e Reporting:</strong>
-                  Interpretação de dados complexos através de métodos
-                  estatísticos, gerando relatórios de progresso e análises
-                  preditivas/descritivas para suporte à tomada de decisão.
+                <li data-i18n="exp.e2.b2">
+                  Interpretação de dados via métodos estatísticos, gerando
+                  relatórios de progresso e análises preditivas para suporte à
+                  decisão.
                 </li>
-                <li>
-                  <strong>Especialidadeem ERP (TOTVS RM):</strong> Domínio na
-                  extração, cruzamento e manutenção de dados originados no
-                  sistema TOTVS RM, garantindo a integridade dos dados de
-                  negócios em sistemas legados.
-                </li>
-                <li>
-                  <strong>Qualidade e Saneamento de Dados:</strong> Atuação na
-                  governança de dados através de rotinas de limpeza (data
-                  cleansing) e correção de problemas em códigos, assegurando
-                  bases confiáveis para auditorias e indicadores.
-                </li>
-                <li>
-                  <strong>Alinhamento Estratégico:</strong> Interface direta com
-                  a gerência e lideranças para o levantamento de requisitos,
-                  priorização de demandas informacionais e tradução de
-                  necessidades de negócio em soluções de dados.
+                <li data-i18n="exp.e2.b3">
+                  Domínio na extração e manutenção de dados no TOTVS RM,
+                  garantindo integridade dos dados de negócio em sistemas
+                  legados.
                 </li>
               </ul>
-              <div class="timeline-skills">
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >SQL</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Python</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >TOTVS RM</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >KPI</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Power BI</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Data Modeling</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Metodologias Ágeis</span
-                >
+              <div class="exp-tags">
+                <span class="exp-tag">SQL</span
+                ><span class="exp-tag">Python</span
+                ><span class="exp-tag">TOTVS RM</span
+                ><span class="exp-tag">Power BI</span
+                ><span class="exp-tag">Data Modeling</span>
               </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">MAR/2023 – MAR/2024</div>
-            <div class="timeline-card">
-              <h3>Estagiário de Desenvolvimento de Software</h3>
-              <div class="timeline-company">ALCOA · São Luís, MA</div>
-              <ul class="timeline-bullets">
-                <li>
-                  <strong>Desenvolvimento Java & APIs:</strong> Criação de APIs
-                  RESTful robustas e desenvolvimento de sistemas alinhados aos
-                  objetivos de negócio, com foco em código testável, escalável e
-                  de alta qualidade.
+
+          <div class="exp-item">
+            <div class="exp-period">Mar 2023 — Mar 2024</div>
+            <div class="exp-body">
+              <div class="exp-header">
+                <h3 data-i18n="exp.e3.role">
+                  Estagiário de Desenvolvimento de Software
+                </h3>
+                <span class="exp-company">ALCOA · São Luís, MA</span>
+              </div>
+              <ul class="exp-bullets">
+                <li data-i18n="exp.e3.b1">
+                  Criação de APIs RESTful robustas e desenvolvimento de sistemas
+                  alinhados aos objetivos de negócio, com foco em código
+                  testável e escalável.
                 </li>
-                <li>
-                  <strong>Cultura Ágil e Colaboração:</strong> Participação
-                  ativa em times ágeis (Scrum), colaborando em cerimônias de
-                  Planning, Daily e Review, garantindo entregas preditivas e
-                  alinhamento com os stakeholders.
+                <li data-i18n="exp.e3.b2">
+                  Participação ativa em times ágeis (Scrum), colaborando em
+                  Planning, Daily e Review com entregas preditivas e alinhamento
+                  com stakeholders.
                 </li>
-                <li>
-                  <strong>Mentoria e Alinhamento Técnico:</strong> Interface com
-                  clientes internos para levantamento de requisitos e
-                  participação em treinamentos técnicos para disseminação de
-                  conhecimento sobre os produtos e boas práticas da empresa.
-                </li>
-                <li>
-                  <strong>Engenharia de Dados & Otimização:</strong>
-                  Automatização de bancos de dados no Power BI e melhoria
-                  contínua da arquitetura de código legada, identificando
-                  problemas e aplicando refatorações focadas em performance.
-                </li>
-                <li>
-                  <strong>Automação e Ecossistema Low-Code:</strong>
-                  Transformação digital e automação da Governança de EHS através
-                  do desenvolvimento integrado utilizando Power BI, Power Apps,
-                  Infield, Forms e SharePoint, reduzindo o trabalho operacional
-                  de diversas áreas.
+                <li data-i18n="exp.e3.b3">
+                  Automação da Governança de EHS via Power BI, Power Apps,
+                  Infield, Forms e SharePoint, reduzindo trabalho operacional de
+                  diversas áreas.
                 </li>
               </ul>
-              <div class="timeline-skills">
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Java</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Python</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Power BI</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >SQL</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Excel</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Metodologias Ágeis</span
-                >
+              <div class="exp-tags">
+                <span class="exp-tag">Java</span
+                ><span class="exp-tag">Python</span
+                ><span class="exp-tag">Power BI</span
+                ><span class="exp-tag">SQL</span
+                ><span class="exp-tag">Scrum</span>
               </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">SET/2020 – MAR/2023</div>
-            <div class="timeline-card">
-              <h3>Analista de Engenharia</h3>
-              <div class="timeline-company">
-                Amorim Coutinho Incorporada · São Luís, MA
+
+          <div class="exp-item">
+            <div class="exp-period">Set 2020 — Mar 2023</div>
+            <div class="exp-body">
+              <div class="exp-header">
+                <h3 data-i18n="exp.e4.role">Analista de Engenharia</h3>
+                <span class="exp-company"
+                  >Amorim Coutinho Incorporada · São Luís, MA</span
+                >
               </div>
-              <ul class="timeline-bullets">
-                <li>
-                  <strong>Análise de Dados e Automatização:</strong>
+              <ul class="exp-bullets">
+                <li data-i18n="exp.e4.b1">
                   Desenvolvimento e manutenção de dashboards de controle e
-                  automatização de processos manuais complexos no Excel
-                  utilizando Power Query, reduzindo o tempo de processamento de
-                  dados da engenharia.
+                  automatização de processos manuais com Power Query.
                 </li>
-                <li>
-                  <strong>Gestão à Vista e Comunicação:</strong> Estruturação e
-                  atualização de quadros de Gestão à Vista para a engenharia,
-                  traduzindo métricas técnicas em indicadores claros para
-                  tomadores de decisão e equipes de campo.
+                <li data-i18n="exp.e4.b2">
+                  Monitoramento de escopo, controle documental e apontamento de
+                  não conformidades, mitigando retrabalhos e custos extras.
                 </li>
-                <li>
-                  <strong>Controle de Qualidade e Gestão de Riscos:</strong>
-                  Monitoramento de escopo, controle de distribuição documental e
-                  apontamento preventivo de não conformidades e desvios de
-                  projetos, mitigando retrabalhos e custos extras na obra.
-                </li>
-                <li>
-                  <strong>Planejamento Físico-Financeiro:</strong> Elaboração de
-                  orçamentos complexos e levantamento de quantitativos
-                  analíticos para suporte ao planejamento estratégico do
-                  portfólio de projetos.
-                </li>
-                <li>
-                  <strong>Suporte Operacional e Treinamentos:</strong> Interface
-                  direta e suporte a técnicos e encarregados de obra, além de
-                  facilitação de reuniões e treinamentos para disseminação de
-                  boas práticas e alinhamento de processos.
+                <li data-i18n="exp.e4.b3">
+                  Elaboração de orçamentos complexos e levantamento de
+                  quantitativos para planejamento estratégico do portfólio de
+                  projetos.
                 </li>
               </ul>
-              <div class="timeline-skills">
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Power BI</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >AutoCAD</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >SQL</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Python</span
-                >
-                <span
-                  class="tag tag-data"
-                  style="font-size: 0.72rem; padding: 3px 10px"
-                  >Excel</span
-                >
+              <div class="exp-tags">
+                <span class="exp-tag">Power BI</span
+                ><span class="exp-tag">Excel</span
+                ><span class="exp-tag">AutoCAD</span
+                ><span class="exp-tag">SQL</span
+                ><span class="exp-tag">Python</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <hr class="divider" />
 
     <!-- EDUCAÇÃO -->
-    <section id="educacao">
+    <section id="educacao" class="section-edu">
       <div class="container">
-        <p class="section-label">Formação</p>
-        <h2 class="section-title">Educação &amp; Certificações</h2>
-
+        <div class="section-header">
+          <span class="section-num">06</span>
+          <h2 data-i18n="edu.title">Formação</h2>
+        </div>
         <div class="edu-grid">
-          <div class="edu-card">
-            <div class="edu-icon">🎓</div>
-            <h3>MBA em Engenharia de Software</h3>
-            <p>MBA USP/Esalq</p>
-            <p>Conclusão prevista em 2027</p>
-            <span class="edu-badge">Pós-graduação</span
-            ><span class="edu-badge edu-badge-green">Em andamento</span>
+          <div class="edu-item">
+            <span class="edu-status edu-status-ongoing" data-i18n="edu.ongoing"
+              >Em andamento</span
+            >
+            <h3 data-i18n="edu.e1.title">MBA em Engenharia de Software</h3>
+            <p class="edu-school">MBA USP/Esalq</p>
+            <p class="edu-year" data-i18n="edu.e1.year">
+              Conclusão prevista: 2027
+            </p>
           </div>
-          <div class="edu-card">
-            <div class="edu-icon">🎓</div>
-            <h3>Graduação em Engenharia Civil</h3>
-            <p>Universidade Federal do Maranhão UFMA · Concluído em 2022</p>
-            <span class="edu-badge">Graduação</span>
+          <div class="edu-item">
+            <span class="edu-status" data-i18n="edu.done">Concluído</span>
+            <h3 data-i18n="edu.e2.title">Graduação em Engenharia Civil</h3>
+            <p class="edu-school">UFMA — Universidade Federal do Maranhão</p>
+            <p class="edu-year">2022</p>
           </div>
-          <div class="edu-card">
-            <div class="edu-icon">🎓</div>
-            <h3>Graduação em Ciência e Tecnologia</h3>
-            <p>Universidade Federal do Maranhão UFMA · Concluído em 2018</p>
-            <span class="edu-badge">Graduação</span>
+          <div class="edu-item">
+            <span class="edu-status" data-i18n="edu.done">Concluído</span>
+            <h3 data-i18n="edu.e3.title">Graduação em Ciência e Tecnologia</h3>
+            <p class="edu-school">UFMA — Universidade Federal do Maranhão</p>
+            <p class="edu-year">2018</p>
           </div>
-          <!-- <div class="edu-card">
-            <div class="edu-icon">☕</div>
-            <h3>Oracle Certified: Java SE Developer</h3>
-            <p>Oracle · Em andamento</p>
-            <span class="edu-badge edu-badge-green">Em andamento</span>
-          </div> -->
-          <!-- <div class="edu-card">
-            <div class="edu-icon">☁️</div>
-            <h3>AWS Certified Cloud Practitioner</h3>
-            <p>Amazon Web Services</p>
-            <span class="edu-badge">Certificação</span>
-          </div>
-          <div class="edu-card">
-            <div class="edu-icon">📊</div>
-            <h3>dbt Fundamentals</h3>
-            <p>dbt Labs · Certificado</p>
-            <span class="edu-badge">Certificação</span>
-          </div> -->
         </div>
       </div>
     </section>
-
-    <hr class="divider" />
 
     <!-- CONTATO -->
-    <section id="contato">
+    <section id="contato" class="section-contact">
       <div class="container">
-        <div class="contact-inner">
-          <p class="section-label">Contato</p>
-          <h2 class="section-title">Vamos conversar?</h2>
-          <p class="section-sub" style="margin: 0 auto 0.5rem">
-            Estou aberto a conversas sobre vagas de Engenharia de Software (foco
-            Java) e também oportunidades na área de dados. Se quiser trocar uma
-            ideia, basta entrar em contato.
-          </p>
-
+        <div class="section-header">
+          <span class="section-num">07</span>
+          <h2 data-i18n="contact.title">Contato</h2>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-text">
+            <p class="contact-lead" data-i18n="contact.lead">
+              Vamos conversar?
+            </p>
+            <p data-i18n="contact.desc">
+              Estou aberto a conversas sobre vagas de Engenharia de Software
+              (foco Java) e oportunidades na área de dados. Se quiser trocar uma
+              ideia, basta entrar em contato.
+            </p>
+          </div>
           <div class="contact-links">
-            <a class="contact-link" href="mailto:bruno@brunucoelho.dev">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              bruno-coelho@hotmail.com
+            <a href="mailto:bruno-coelho@hotmail.com" class="contact-link">
+              <span class="contact-link-label">E-mail</span>
+              <span class="contact-link-value">bruno-coelho@hotmail.com ↗</span>
             </a>
             <a
-              class="contact-link"
               href="https://linkedin.com/in/brunucoelho"
               target="_blank"
+              rel="noopener"
+              class="contact-link"
             >
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-              LinkedIn
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value"
+                >linkedin.com/in/brunucoelho ↗</span
+              >
             </a>
             <a
-              class="contact-link"
               href="https://github.com/brunucoelho"
               target="_blank"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                />
-              </svg>
-              GitHub
-            </a>
-            <!-- <a
+              rel="noopener"
               class="contact-link"
-              href="https://www.brunucoelho.dev"
-              target="_blank"
             >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <line x1="2" y1="12" x2="22" y2="12" />
-                <path
-                  d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"
-                />
-              </svg>
-              brunucoelho.dev
-            </a> -->
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">github.com/brunucoelho ↗</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-      <p>
-        Feito com ☕ por
-        <a href="https://www.brunucoelho.dev">Bruno Coelho</a> · brunucoelho.dev
-        · 2024
-      </p>
+      <div class="container footer-inner">
+        <span class="footer-logo">brunucoelho.dev</span>
+        <span class="footer-copy" data-i18n="footer.copy"
+          >Feito por @brunucoelho · 2026</span
+        >
+      </div>
     </footer>
   </body>
 </html>
