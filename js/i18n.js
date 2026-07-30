@@ -50,9 +50,9 @@ const translations = {
     "projects.type.bridge": "Dados + Engenharia",
     "projects.featured": "Destaque",
     "projects.demo": "Demo ↗",
-    "projects.p1.title": "API de Gestão Financeira",
+    "projects.p1.title": "CRUD com JDBC Puro",
     "projects.p1.desc":
-      "API REST completa com autenticação JWT, controle de acesso por roles, operações CRUD, paginação e documentação Swagger. Arquitetura em camadas com boas práticas SOLID.",
+      "Aplicação de console em Java para estudo aprofundado da API JDBC sem uso de ORM: conexão com MySQL via Docker, CRUD completo de duas entidades relacionadas (Producer/Anime) com PreparedStatement, além de exploração de RowSet, transações, CallableStatement e metadados de banco.",
     "projects.p2.title": "Data Analytics API",
     "projects.p2.desc":
       "Pipeline de dados em Python processando dados de vendas + API Java expondo os resultados analíticos em tempo real. Une os dois mundos em uma solução end-to-end.",
@@ -161,9 +161,9 @@ const translations = {
     "projects.type.bridge": "Data + Engineering",
     "projects.featured": "Featured",
     "projects.demo": "Demo ↗",
-    "projects.p1.title": "Financial Management API",
+    "projects.p1.title": "Pure JDBC CRUD",
     "projects.p1.desc":
-      "Complete REST API with JWT authentication, role-based access control, CRUD operations, pagination, and Swagger documentation. Layered architecture following SOLID principles.",
+      "Java console application for an in-depth study of the JDBC API without using an ORM: MySQL connection via Docker, complete CRUD operations for two related entities (Producer/Anime) using PreparedStatement, as well as exploration of RowSet, transactions, CallableStatement, and database metadata.",
     "projects.p2.title": "Data Analytics API",
     "projects.p2.desc":
       "Python data pipeline processing sales data + Java API exposing analytical results in real-time. Bridges both worlds in an end-to-end solution.",
