@@ -56,9 +56,9 @@ const translations = {
     "projects.p2.title": "Data Analytics API",
     "projects.p2.desc":
       "Pipeline de dados em Python processando dados de vendas + API Java expondo os resultados analíticos em tempo real. Une os dois mundos em uma solução end-to-end.",
-    "projects.p3.title": "Sistema de Agendamentos",
+    "projects.p3.title": "Board de Tarefas com Java",
     "projects.p3.desc":
-      "Aplicação com regras de negócio complexas, validações customizadas, testes unitários com JUnit 5 e cobertura de código. Foco em clean code e arquitetura testável.",
+      "Aplicação de console em Java para gerenciamento de boards de tarefas no estilo Kanban, com foco no estudo aprofundado da API JDBC sem uso de ORM: conexão com MySQL via Docker, persistência de quatro entidades relacionadas (Board, Coluna, Card e Bloqueio) com PreparedStatement, controle transacional manual (commit/rollback), versionamento do schema com Liquibase e regras de negócio para mover, bloquear, desbloquear e cancelar cards entre as colunas.",
     "projects.p4.title": "Pipeline de Dados com Airflow",
     "projects.p4.desc":
       "Pipeline automatizado processando +2M registros/dia, com orquestração via Airflow, transformações dbt e dashboards no Power BI. Redução de 60% no tempo de atualização.",
@@ -88,7 +88,7 @@ const translations = {
       "Participação ativa em times ágeis (Scrum), colaborando em Planning, Daily e Review com entregas preditivas e alinhamento com stakeholders.",
     "exp.e3.b3":
       "Automação da Governança de EHS via Power BI, Power Apps, Infield, Forms e SharePoint, reduzindo trabalho operacional de diversas áreas.",
-    "exp.e4.role": "Analista de Engenharia",
+    "exp.e4.role": "Engenheiro Civil",
     "exp.e4.b1":
       "Desenvolvimento e manutenção de dashboards de controle e automatização de processos manuais com Power Query.",
     "exp.e4.b2":
@@ -167,9 +167,9 @@ const translations = {
     "projects.p2.title": "Data Analytics API",
     "projects.p2.desc":
       "Python data pipeline processing sales data + Java API exposing analytical results in real-time. Bridges both worlds in an end-to-end solution.",
-    "projects.p3.title": "Scheduling System",
+    "projects.p3.title": "Task Board with Java",
     "projects.p3.desc":
-      "Application with complex business rules, custom validations, unit tests with JUnit 5, and code coverage. Focus on clean code and testable architecture.",
+      "Java console application for managing Kanban-style task boards, focused on an in-depth study of the JDBC API without any ORM: connection to MySQL via Docker, persistence of four related entities (Board, Column, Card and Block) with PreparedStatement, manual transaction control (commit/rollback), database schema versioning with Liquibase, and business rules to move, block, unblock and cancel cards across columns.",
     "projects.p4.title": "Data Pipeline with Airflow",
     "projects.p4.desc":
       "Automated pipeline processing 2M+ records/day, with Airflow orchestration, dbt transformations, and Power BI dashboards. 60% reduction in update time.",
@@ -199,7 +199,7 @@ const translations = {
       "Active participation in agile teams (Scrum), collaborating in Planning, Daily, and Review ceremonies with predictable deliveries.",
     "exp.e3.b3":
       "EHS Governance automation via Power BI, Power Apps, Infield, Forms, and SharePoint, reducing manual work across multiple areas.",
-    "exp.e4.role": "Engineering Analyst",
+    "exp.e4.role": "Civil Engineer",
     "exp.e4.b1":
       "Developed and maintained control dashboards and automated manual processes using Power Query.",
     "exp.e4.b2":
