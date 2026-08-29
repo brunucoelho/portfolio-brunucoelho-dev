@@ -14,7 +14,8 @@ const translations = {
     "hero.tagline":
       "5+ anos construindo soluções com dados.<br/>Hoje, construindo os sistemas que os sustentam.",
     "hero.cta.projects": "Ver Projetos",
-    "hero.cta.contact": "Contato",
+    "hero.cta.contact": "Falar comigo",
+    "hero.cta.cv": "Baixar CV",
     "hero.stack": "Stack atual",
 
     "about.title": "Sobre mim",
@@ -125,7 +126,8 @@ const translations = {
     "hero.tagline":
       "5+ years building data solutions.<br/>Now, building the systems that sustain them.",
     "hero.cta.projects": "View Projects",
-    "hero.cta.contact": "Contact",
+    "hero.cta.contact": "Get in touch",
+    "hero.cta.cv": "Download CV",
     "hero.stack": "Current stack",
 
     "about.title": "About",
@@ -248,8 +250,24 @@ function applyTranslations(lang) {
     }
   });
 
-  // Update html lang attribute
+  // Update html lang + data-lang attributes
   document.documentElement.lang = lang === "pt" ? "pt-BR" : "en-US";
+  document.documentElement.dataset.lang = lang;
+
+  // Point the CV download to the file matching the current language
+  const cvLink = document.getElementById("cvDownload");
+  if (cvLink) {
+    cvLink.href =
+      lang === "pt"
+        ? "assets/curriculo-bruno-coelho-pt.pdf"
+        : "assets/bruno-coelho-resume-en.pdf";
+    cvLink.setAttribute(
+      "download",
+      lang === "pt"
+        ? "Curriculo-Bruno-Coelho.pdf"
+        : "Bruno-Coelho-Resume.pdf",
+    );
+  }
 
   // Update flag indicators
   const langLabel = document.getElementById("langLabel");
